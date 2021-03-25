@@ -1,19 +1,40 @@
 This repository contains all required data in order to set up a Feflow simulation of the numerical groundwater model for the Hainich Critical Zone Exploratory, CRC 1076 AquaDiva, built and published by RÖDIGER et al. 2021.
 
 Feflow is commercial software developed and maintained [by MIKE Powered by DHI](https://www.mikepoweredbydhi.com/products/feflow).
-In [Viewer mode](http://www.feflow.info/html/help71/feflow/mainpage.htm#t=14_References%2FPackages%2Fviewer.html%3Frhhlterm%3Dviewer%26rhsyns%3D%2520), FEFLOW does not need a license. Supermesh files, models, and results files can be loaded and inspected.
+In [Viewer mode](http://www.feflow.info/html/help71/feflow/mainpage.htm#t=14_References%2FPackages%2Fviewer.html%3Frhhlterm%3Dviewer%26rhsyns%3D%2520), FEFLOW does not need a license. Supermesh files (FEM), models, and results files (e.g. DAC) can be loaded and inspected. Further information can be found in the [Feflow 7.1 Documentation](http://www.feflow.info/html/help71/feflow/mainpage.htm#t=02_News%2Fnews.html).
 
 The FEM-files contain all required information to load and run the simulation. Based on the FEM-files some additional information were exported (see list below).
-The model output files are much larger in size, thus can be found ON ZENODO.
+The model output files (DAC) are much larger in size, thus can be found ON ZENODO.
 
 
 List of Items
 =============
 
 ```
+.
 ├── LICENSE
 ├── README.md
 ├── steady_state
+│   ├── Hainich_czo_num_model_steady.fem
+│   ├── auxiliary
+│   ├── boundary_conditions
+│   │   ├── hydraulic_head_bc.dbf
+│   │   ├── hydraulic_head_bc.shp
+│   │   └── hydraulic_head_bc.shx
+│   ├── geometry
+│   │   ├── elevation.dbf
+│   │   ├── elevation.shp
+│   │   └── elevation.shx
+│   └── material_properties
+│       ├── K_xx.dbf
+│       ├── K_xx.shp
+│       ├── K_xx.shx
+│       ├── K_yy.dbf
+│       ├── K_yy.shp
+│       ├── K_yy.shx
+│       ├── K_zz.dbf
+│       ├── K_zz.shp
+│       └── K_zz.shx
 └── transient_state
     ├── Hainich_czo_num_model_transient.fem
     ├── auxiliary
@@ -82,10 +103,6 @@ List of Items
         ├── 230_lateral_inflow.pow
         ├── 234_lateral_inflow.pow
         ├── 240_lateral_inflow.pow
-        ├── H13.pow
-        ├── H14.pow
-        ├── H21.pow
-        ├── H23.pow
         └── recharge.pow
 ```
 
